@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant New China Town - Rai ISE 2018</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/total.js"></script>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="section-to-print">
+                <div class="col-12 text-center"><h1>新中華酒樓</h1></div>
+                <div class="col-12 text-center"><h1>New China Town</h1></div>
+                <div class="col-12 text-center"><p>Van Woustraat 194D 1073LZ Amsterdam</p></div>
+                <div class="col-12 text-center"><p>Phone: 020 - 676 16 13</p></div>
+                <div class="col-12 text-center"><p>www.restaurantnewchinatown.nl</p></div>
+                <div class="col-12 text-center"><p>Email: info@restaurantnewchinatown.nl</p></div>
+            </div>
+        
+            <div class="col-12">
+                <form id="total">
+                    <div class="form-group row top-text">
+                        <label for="company" class="col-3 offset-3 col-form-label">Company:</label>
+                        <div class="col-5">
+                            <input class="form-control" placeholder="Company" id="company">
+                        </div>
+                    </div>
+                    <div class="form-group row top-text">
+                        <label for="Hal" class="col-3 offset-3 col-form-label">Hall + stand:</label>
+                        <div class="col-5">
+                            <input class="form-control" placeholder="Hall + stand" id="hal">
+                        </div>
+                    </div>
+                    <div class="form-group row top-text">
+                        <label for="date" class="col-3 offset-3 col-form-label">Date:</label>
+                        <div class="col-3">
+                            <input class="form-control" type="date" placeholder="Date" id="date">
+                        </div>
+                        <div class="col-2">
+                            <input class="form-control" type="time" placeholder="Time" id="time">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <label for="gerecht_1" class="col-1 offset-1 col-form-label">Number</label>
+                        <label for="gerecht_1" class="col-2 col-form-label">Dish</label>
+                        <label for="gerecht_1" class="col-2 col-form-label">Price</label>
+                        <label class="col-1 col-form-label">&nbsp;</label>
+                        <div class="col-2"><label class="col-1 col-form-label">Quantity</label></div>
+                        <label class="col-2 col-form-label">Subtotal</label>
+                    </div>
+                    <hr>
+                </form>
+                <form id="form2">
+                    <hr>
+                    <div class="form-group row">
+                        <label class="col-6 offset-1 col-form-label">TOTAL (VAT INCLUDED)</label>
+                        <div class="col-2 col-form-label">
+                            <p id="countamount">0</p>
+                        </div>
+                        <div class="col-2 col-form-label">
+                            <p class="floatleft">&euro;</p>
+                            <p id="totalamount" class="floatright">0,00</p>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-6 offset-1 col-form-label">VAT 6%</label>
+                        <div class="col-2 offset-2 col-form-label">
+                            <p class="floatleft">&euro;</p>
+                            <p id="vat" class="floatright">0,00</p>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <span class="col-9 offset-1">
+                        <input id="totalmath" type="button" value="Print" class="btn btn-primary contactbtn">
+                    </span>
+                    <span class="col-1">
+                        <input id="showall" type="button" value="Show all" class="btn btn-primary contactbtn">
+                    </span>
+                </div>
+                <div id="keuken"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row"></div>
+        </div>
+    </footer>
+</body>
+</html>

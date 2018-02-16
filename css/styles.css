@@ -1,0 +1,175 @@
+*, *:before, *:after {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input, input:before, input:after {
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+} 
+
+@page { 
+    /* auto is the initial value */ 
+    /* size: auto; */
+    size: A5 portrait;
+
+    /* this affects the margin in the printer settings */ 
+    margin: 5mm 5mm 5mm 5mm;
+} 
+
+#section-to-print, #section-to-print * {
+    width: 100%;
+}
+
+.dishamount {
+    padding-top: 10px;
+}
+
+.top-text {
+    max-height: 25px;
+}
+
+.top-text:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+.top-text .col-form-label {
+    padding-top: 0;
+}
+
+.top-text .form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media print {
+    label {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .container {
+        max-width: 800px !important;
+        min-width: 500px !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #keuken, #section-to-print, #section-to-print * {
+      visibility: visible;
+      display: block;
+    }
+
+    #section-to-print {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        border: 0;
+    }
+
+    input[type="button"] {
+        visibility: hidden;
+        display: none;
+    }
+
+    input[type="time"] {
+        visibility: hidden;
+        display: none;
+    }
+
+    #keukentop {
+        page-break-after: always;
+    }
+
+    #keuken {
+        page-break-before: always;
+        font-size: 30px;
+        /* margin-top: -200px; */
+    }
+
+    .big-letter {
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #time {
+        visibility: hidden;
+        display: none;
+    }
+
+    .price {
+        font-size: 30px;
+    }
+
+    .total {
+        border: 3px black solid;
+        margin: auto;
+        right: 0px;
+        border-radius: 20px;
+        text-align: right;
+        padding-right: 50px;
+        font-size: 40px;
+    }
+
+    .dishamount {
+        padding-top: 2px;
+    }
+}
+
+@media screen {
+    #keuken, #section-to-print, #section-to-print * {
+      visibility: hidden;
+      display: none;
+    }
+
+    .top-text {
+        margin-left: -230px !important;
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+hr {
+    margin: 0 !important;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+}
+
+input[type="number"] {
+    text-align: center;
+}
+
+#countamount {
+    text-align: center;
+    margin-right: 15px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.textbox {
+    margin-top: 20px;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+    margin-right: 40px;
+}
